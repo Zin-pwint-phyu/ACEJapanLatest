@@ -1,0 +1,109 @@
+@import "tailwindcss";
+@font-face {
+  font-family: InterRegular;
+  src: url("/src/assets/fonts/Inter_24pt-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: InterBold;
+  src: url("/src/assets/fonts/Inter_28pt-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: InterExtraBold;
+  src: url("/src/assets/fonts/Inter_18pt-ExtraBold.ttf") format("truetype");
+}
+@theme {
+  --font-family-sans: "InterRegular", sans-serif;
+  --font-family-bold: "InterBold", sans-serif;
+  --font-family-extrabold: "InterExtraBold", sans-serif;
+  --color-red: #c12329;
+  --color-blue: #1c2752;
+  --color-dardBlue: #132745;
+  --color-gray: #7e7e7e;
+  --color-seconary: #f2f2f2;
+  --color-yellow: #ffc368;
+  --color-primary: #d2d2d2;
+  --color-gradientRed: #5b1113;
+  --color-dark-grey: #263238;
+  --color-violet: #4640de;
+}
+body {
+  font-family: var(--font-family-sans);
+}
+@layer components {
+  .nav {
+    @apply relative overflow-hidden;
+  }
+
+  .nav::after {
+    @apply content-[''] absolute left-0 top-0 h-full w-0 bg-black md:bg-white transition-all duration-400 ease-in-out z-0;
+  }
+
+  .nav:hover::after {
+    @apply w-full;
+  }
+  .nav span {
+    @apply relative z-10 transition-colors duration-300 ease-in-out;
+  }
+
+  .nav:hover span {
+    @apply text-white md:text-red;
+  }
+
+  .dropDown a span {
+    @apply relative z-20  transition-colors duration-300 ease-in-out;
+  }
+
+  .dropDown a::before {
+    @apply content-[''] absolute left-0 top-0 h-full w-0 bg-red transition-all duration-400 ease-in-out;
+  }
+
+  .dropDown a:hover::before {
+    @apply w-full;
+  }
+  .dropDown a {
+    @apply relative z-60;
+  }
+
+  .dropDown a:hover {
+    @apply text-white;
+  }
+}
+
+@layer utilities {
+  .bg-custom {
+    background-image: url("/outsourceImg/image_42.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .cusContainer {
+    @apply w-full lg:w-[680px] xl:w-[940px] 2xl:w-[1200px];
+  }
+  ul li {
+    word-spacing: normal !important;
+  }
+}
+
+.bg-color-10 {
+  background-color: #f2f2f2;
+}
+.bg-color-20 {
+  background-color: #c12329;
+}
+.bg-color-30 {
+  background-color: #1c2752;
+}
+.bg-color-filter {
+  background-color: rgba(28, 39, 82, 0.6);
+}
+.text-color-1 {
+  color: #1c2752;
+}
+.text-color-3 {
+  color: #c12329;
+}
+.text-color-2 {
+  color: #7e7e7e;
+}

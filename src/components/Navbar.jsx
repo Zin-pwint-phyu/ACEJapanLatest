@@ -111,16 +111,16 @@ const Navbar = () => {
                 className={`absolute w-full transition-transform duration-500 ${
                   isEng ? "translate-y-full " : "translate-y-0 "
                 }`}
-                onClick={() => setIsEng(true)}
+                // onClick={() => setIsEng(true)}
               />
-              <img
+              {/* <img
                 src="/Eng.png"
                 alt="English"
                 className={`absolute w-full transition-transform  duration-500 ${
                   isEng ? "translate-y-0    " : "-translate-y-full "
                 }`}
                 onClick={() => setIsEng(false)}
-              />
+              /> */}
             </div>
           </div>
         </div>

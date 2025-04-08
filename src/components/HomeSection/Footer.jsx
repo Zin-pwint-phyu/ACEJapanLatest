@@ -44,12 +44,12 @@ const Footer = () => {
       </div>
 
       <div className="w-full h-auto bg-dark-grey ">
-        <Container className="px-5 md:px-5 py-10">
+        <Container className="px-5 md:px-5 py-10 cusContainer mx-auto">
           <motion.div
             variants={fadeUp(0.3)}
             initial="hidden"
             whileInView="show"
-            className="flex xl:flex-nowrap  flex-wrap md:justify-around  xl:justify-around md:items-start space-y-10 md:space-y-0">
+            className=" flex justify-start items-center md:gap-35 gap-10 space-y-10  md:space-y-0 lg:flex-nowrap  flex-wrap">
             <div className="text-center md:text-left w-full md:w-auto">
               <img
                 src="/logo.svg"
@@ -82,7 +82,7 @@ const Footer = () => {
             </div>
 
             {/* Middle Section: Links */}
-            <div className="flex flex-col md:flex-row md:space-x-16 w-full md:w-auto text-center md:text-left">
+            <div className="flex flex-col md:flex-row md:space-x-20 w-full md:w-auto text-center md:text-left">
               {/* Company Links */}
               <div>
                 <motion.p
